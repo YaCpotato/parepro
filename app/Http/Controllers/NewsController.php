@@ -25,7 +25,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        // return view('todo/create');
+        return view('todo/create');
     }
 
     /**
@@ -36,7 +36,13 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Todo;
+        $project->tile = $request->title;
+        $project->description = $request->description;
+        $project->state = $request->status;
+
+        $project->save();
+        return redirect('/news');
     }
 
     /**

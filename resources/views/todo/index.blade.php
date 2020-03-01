@@ -18,7 +18,7 @@
       @foreach($projects as $project)
       <tr>
         <td>
-          <span>{{ $project->title }}</span>
+          <span>{{ $project->tile }}</span>
         </td> 
         <td>
           <span>{{ $project->state }}</span>
